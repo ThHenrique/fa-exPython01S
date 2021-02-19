@@ -1,0 +1,48 @@
+value = int(input('Informe uma nota: '))
+while value < 0 or  value >  10:
+  print('Informe um valor válido')
+  value = int(input('Informe uma nota: '))
+print(value)
+
+print('**'*20)
+user = input('Usuário: ')
+password = input('Senha: ')
+print('=='*20)
+while user == password:
+  print('A senha não pode ser igual ao usuário!!! - Error 500')
+  password= input('Informe uma senha diferente: ')
+print(f'Cadastro efetuado com sucesso\n - Seja Bem Vindo {user}')
+
+
+cityA = 80000
+cityB = 200000
+x = 0
+while cityA <= cityB:
+  cityA = cityA +  3 / 100 * cityA
+  cityB = cityB +  1.5 / 100 * cityB
+  x= x + 1
+print(f'Em {x} anos')
+
+
+print('*='*15)
+print('Sequencia de Fibonacci')
+print('*='*15)
+x = int(input('informe um número inteiro: '))
+t1 = 0
+t2 = 1
+print('=='*30)
+print(f'{t1} -> {t2} -> ', end="")
+count = 3
+while count <= x:
+  t3 = t1 + t2
+  print(f'{t3} -> ', end="")
+  t1, t2 = t2, t3
+  count += 1
+print(f'Número de Fibonacci = {t3}')
+
+
+value1 = int(input('Informe um valor: '))
+value2 = int(input('Informe um valor: '))
+while value1 % value2 != 0:
+  value1, value2 = value2, value1%value2
+print(value2)

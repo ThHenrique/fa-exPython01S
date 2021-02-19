@@ -1,0 +1,86 @@
+import random
+lista = random.sample(range(100), 10)   #amostragem -- pega 10 números aleatórios de 1 a 100
+menor = maior = lista[0]
+print("Números sorteados ", end="")
+for x in lista:
+  print(f'{x} -> ', end="")
+  if x < menor:
+    menor = x
+  if x > maior:
+    maior = x
+print('\n')
+print(f'Maior número {maior} ', end="")
+print(f'Menor Número {menor}')
+
+
+import random
+lista = random.sample(range(100), 20)
+pares = []
+impares = []
+for x in lista:
+  if x % 2 == 0:
+    pares.append(x)
+  else :
+    impares.append(x)
+print(f'{lista} - Números Sorteados ')
+print(f'{pares} - Número Pares')
+print(f'{impares} - Números Impares')
+
+
+import random
+lista1 = random.sample(range(100), 10)
+lista2 = random.sample(range(100), 10)
+lista = []
+print(lista1)
+print(lista2)
+for x in range(10):
+  lista.append(lista1[x])
+  lista.append(lista2[x])
+print(lista)
+
+
+
+frase = '''The Python Software Foundation and the global Python
+community welcome and encou
+rage participation by everyone. Our community is based on
+mutual respect, tolerance, and encouragement, and we are working to help each other live up
+to these principles. We want our community to be more diverse: whoever you are, and
+whatever your backgrou
+nd, we welcome you.'''
+frase = frase.lower()
+frase = frase.replace(',', ' ')
+frase = frase.replace('.', ' ')
+frase = frase.replace(':', ' ')
+frase = frase.split()
+result = []
+for palavra in frase:
+  if palavra[0] in 'python' or palavra[-1] in 'python':
+    result.append(palavra)
+print(result)
+
+
+
+frase = '''The Python Software Foundation and the global Python
+community welcome and encou
+rage participation by everyone. Our community is based on
+mutual respect, tolerance, and encouragement, and we are working to help each other live up
+to these principles. We want our community to be more diverse: whoever you are, and
+whatever your backgrou
+nd, we welcome you.'''
+frase = frase.lower()
+frase = frase.replace(',', ' ')
+frase = frase.replace('.', ' ')
+frase = frase.replace(':', ' ')
+frase = frase.split()
+result = []
+def verifyWord(word):  
+    for letra in word:
+      if letra in 'python' and len(word) > 4:
+        return True
+    return False    
+for word in frase:
+  if verifyWord(word):
+    result.append(word)
+print(len(result))
+
+

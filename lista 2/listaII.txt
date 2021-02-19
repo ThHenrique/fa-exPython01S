@@ -1,0 +1,91 @@
+r1 = float(input("Primeiro seguimento :"))
+r2 = float (input("Segundo seguimento :"))
+r3 = float (input ("terceiro seguimento :"))
+if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
+  print ("Os seguimentos acima podem formar um triângulo!", end = " ")
+  if r1 == r2 == r3:
+    print ("E ele um triângulo equilátero")
+  elif r1 != r2 != r3 != r1 :
+    print ("E ele um triângulo escaleno")
+  else:
+    print ("E ele um triângulo isoceles") 
+else: 
+  print('Não é triângulo')
+
+
+print('**'*18)
+print('Ano bissexto: ')
+ano = int(input('Informe o ano para ser analisado: '))
+if ano % 4 == 0 and (ano % 100 != 0 or ano % 400 == 0):  
+  print("Bissexto")
+else: print('Não bissexto')
+
+
+kg= float(input("Digite o peso total dos peixes em kg: "))
+if kg > 50:
+  punicao = (kg - 50) * 4
+  excesso = kg - 50
+  print(f'A quantidade de peixe que você possui ultrapassou {excesso:.2f} kg. você será multado em {punicao:.2f} reais')
+else :
+  print ("Você está dentro dos limites de quantidade de peixes, você está liberado, tenha um bom dia!")
+  
+
+print('**'*20)
+num1 = int(input('Digite um número: '))
+num2 = int(input('Digite um número: '))
+num3 = int(input('Digite um número: '))
+print('**'*20)
+if num1 > num2 and num1 > num3:
+  print(f'{num1} é o maior')
+if num2 > num1 and num2 > num3:
+  print(f'{num2} é o maior')
+if num3 > num1 and num3 > num2:
+  print(f'{num3} é o maior')
+
+
+print('**'*20)
+num1 = int(input('Digite um número: '))
+num2 = int(input('Digite um número: '))
+num3 = int(input('Digite um número: '))
+print('**'*20)
+if num1 < num2 and num1 < num3:
+  print(f'{num1} é o Menor')
+if num2 < num1 and num2 < num3:
+  print(f'{num2} é o Menor')
+if num3 < num1 and num3 < num2:
+  print(f'{num3} é o Menor')
+if num1 > num2 and num1 > num3:
+  print(f'{num1} é o maior')
+if num2 > num1 and num2 > num3:
+  print(f'{num2} é o maior')
+if num3 > num1 and num3 > num2:
+  print(f'{num3} é o maior')
+
+
+hr_tb = float(input("Horas trabalhadas por mês: "))
+v_hr = float(input("Valor recebido por hora:  "))
+sb = hr_tb * v_hr
+inss = ((sb / 100) * 8)
+ir = ((sb / 100) * 11)
+sind = ((sb / 100 ) * 5)
+desc = inss + ir + sind
+sl = (sb - desc)
+print (f'+ Salário Bruto: R${sb:.2f}')
+print (f'- IR: R${ir:.2f}')
+print (f'- INSS : R${inss:.2f}')
+print (f'- Sindicato R${sind:.2f}')
+print (f'DESCONTO TOTAL: R${desc:.2f}')
+print (f'Salário Liquido R${sl:.2f}')
+
+
+print('**'*20)
+metros = float(input('M² a ser pintado: '))
+print('=='*20)
+if metros % 54 == 0:
+  latas = metros / 54
+  vTotal = latas * 80
+  print(f'Serão utilizadas {latas:.0f} lata(s). Total R$ {vTotal:.2f}')
+else:
+  latas =( metros / 54) + 1
+  vTotal = latas * 80
+  print(f'Serão utilizadas {latas:.0f} lata(s). Total R$ {vTotal:.2f}')

@@ -1,0 +1,6 @@
+print('**' * 25)
+print('Conversão de metros p/ milímetros \n')
+metros = float(input('Metros: '))
+conversao = int(metros * 1000)
+print('_' * 50)
+print(f'Resultado: {metros} metros é equivalente a {conversao} milímetros')
